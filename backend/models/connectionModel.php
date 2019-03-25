@@ -6,13 +6,13 @@
  * Time: 10:00
  */
 
-class connectionModel extends defaultModel
+<?php
+class connectionModel
 {
     private $server;
     private $database;
     private $username;
     private $password;
-    private $charset;
     protected $connection;
 
     public function connect()
@@ -21,10 +21,8 @@ class connectionModel extends defaultModel
         $this->database = "";
         $this->username = "";
         $this->password = "";
-        $this->charset = "UTF-8";
         try {
-            $dsn = "mysql:host=".$this->server.";dbname".$this->database.";charset=".$this->charset;
-            $pdo = new PDO($dsn, $this->username, $this->password);
+            $pdo = new PDO("mysql:host=$this->server;dbname=$this->database", $this->username, $this->password);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->connection = $pdo;
         } catch (PDOException $e) {
