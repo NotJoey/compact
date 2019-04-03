@@ -5,8 +5,6 @@
  * Date: 21.02.19
  * Time: 10:00
  */
-
-<?php
 class connectionModel
 {
     private $server;
