@@ -1,3 +1,3 @@
 # compact
-Compact, a very basic MVC.
-This should not be used for professional purposes.
+Compact is a very basic MVC, written for learning purposes.  
+This should only be used as a reference.
